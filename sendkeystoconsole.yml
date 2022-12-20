@@ -1,0 +1,14 @@
+---
+- name: Send keystrokes to the guest virtual machine
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Send keystrokes to the guest virtual machine
+      community.vmware.vmware_guest_sendkey:
+        hostname: "10.10.200.60"
+        username: "admininistrator@vsphere.local"
+        password: "*nrK#4p<@,@ch"
+        validate_certs: no
+        name: ALEXA06
+        key: "Hello this is test"
+        delay: 500
